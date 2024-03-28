@@ -54,6 +54,7 @@ const Login = () => {
     console.log(result)
     if (result.data) {
       setLogin(true)
+      alert("login successfully ")
       navigate('/');
     }
     console.log("token", result.data)

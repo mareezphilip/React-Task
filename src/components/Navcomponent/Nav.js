@@ -9,10 +9,23 @@ const Nav =() =>{
 
   const navigate = useNavigate();
 
-  const logout = () =>{
-    localStorage.removeItem("token");
-    setLogin(false)
-    navigate('/login');
+  const logout = async() =>{
+   
+    const apiUrl = 'http://localhost:3004/users/logout';
+    const token = localStorage.getItem("token");
+
+      const result = await fetch(apiUrl, {
+         method: 'PATCH',
+         headers: {
+              'Authorization': `${token}`
+        }
+       })
+      const resultjson = await  result.json()
+      alert("log out successfully ")
+      console.log("result" , resultjson)
+      localStorage.removeItem("token")
+      setLogin(false)
+      navigate('/login')
   }
 
   const loginfun = () =>{
