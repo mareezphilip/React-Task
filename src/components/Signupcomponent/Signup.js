@@ -67,7 +67,7 @@ const Signup = () => {
             <div className="background"> </div>
             <div class="overlay"></div>
             <div className="formdiv w-50  m-auto ">
-                <h1 className="py-4 text-white"> Login </h1>
+                <h1 className="py-4 text-white"> Sign up  </h1>
                 <form onSubmit={handleSubmit} className="">
                     <div className="mb-3">
                         <label htmlFor="exampleInputEmail1" className="form-label text-white">User Name</label>
