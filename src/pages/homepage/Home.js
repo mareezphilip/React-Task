@@ -2,6 +2,7 @@ import React, { useState , useContext} from "react";
 import './Home.css'
 import { Usercontext } from "../../contexts/context";
 import ProductList from "../../components/ProductList/Productlist";
+import Footer from "../../components/footercomponents/Footer";
 
 const Home = () => {
     const {Login } = useContext(Usercontext)
@@ -16,6 +17,7 @@ const Home = () => {
         </ div >
 
         <ProductList />
+        <Footer/>
         </>
        
         
